@@ -9,6 +9,7 @@ const equityTypes = `
         description: String
         ticker: String
         price: Float
+        themes: [String]
     }
 `;
 export default equityTypes;
