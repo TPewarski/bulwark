@@ -1,8 +1,4 @@
-
-// import { gql } from 'graphql-tag'
-
-
-const Equity = `
+const equityTypes = `
     type Query {
         equity: Equity
     }
@@ -12,8 +8,7 @@ const Equity = `
         name: String
         description: String
         ticker: String
-        amount: Float
-        value: Float
+        price: Float
     }
-`
-export default Equity
+`;
+export default equityTypes;

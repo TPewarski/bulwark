@@ -1,8 +1,8 @@
 import { gql } from 'graphql-tag'
-import Equity from './types/equity'
+import equityTypes from './equity/equityTypes'
 
 const typeDefs = gql`
-  ${Equity}
+  ${equityTypes}
 `
 
 export default typeDefs
