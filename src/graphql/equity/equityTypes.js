@@ -1,6 +1,6 @@
 const equityTypes = `
     type Query {
-        equity: Equity
+        equity(ticker: String): Equity
     }
 
     type Equity {
