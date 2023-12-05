@@ -1,6 +1,11 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import {
+  usePlaidLink,
+  PlaidLinkOptions,
+  PlaidLinkOnSuccess,
+} from 'react-plaid-link';
 
 export default function Home() {
   return (
@@ -16,27 +21,33 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+          Getting started is easy. Our partner Plaid will allow us to aggregate your assets for analysis. Using Plaid we can connect to your financial institutions without ever having access to your credentials. Your security is of upmost importance to us
         </p>
 
         <div className={styles.grid}>
-          <Link href="portfolio">Portfolio</Link>
+          <Link className={styles.card} href="portfolio">
+            <h3>Portfolio &rarr;</h3>
+            <p>
+              How are you allocatted and how have you performed
+            </p>
+            </Link>
+
 
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
+            href="risk"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h3>Bulwark Risk Analysis &rarr;</h3>
+            <p>Discover how your portfolio will perform in challenging environments and what risks you may not be aware of</p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Stock Insights &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              What does the market say about a stock's value and how will it fit into your overall strategy
             </p>
           </a>
         </div>
