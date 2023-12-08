@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 import {
   usePlaidLink,
   PlaidLinkOptions,
   PlaidLinkOnSuccess,
-} from 'react-plaid-link';
+} from "react-plaid-link";
 
 export default function Home() {
   return (
@@ -21,24 +21,24 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Getting started is easy. Our partner Plaid will allow us to aggregate your assets for analysis. Using Plaid we can connect to your financial institutions without ever having access to your credentials. Your security is of upmost importance to us
+          Getting started is easy. Our partner Plaid will allow us to aggregate
+          your assets for analysis. Using Plaid we can connect to your financial
+          institutions without ever having access to your credentials. Your
+          security is of upmost importance to us
         </p>
 
         <div className={styles.grid}>
           <Link className={styles.card} href="portfolio">
             <h3>Portfolio &rarr;</h3>
-            <p>
-              How are you allocatted and how have you performed
-            </p>
-            </Link>
+            <p>How are you allocatted and how have you performed</p>
+          </Link>
 
-
-          <a
-            href="risk"
-            className={styles.card}
-          >
+          <a href="risk" className={styles.card}>
             <h3>Bulwark Risk Analysis &rarr;</h3>
-            <p>Discover how your portfolio will perform in challenging environments and what risks you may not be aware of</p>
+            <p>
+              Discover how your portfolio will perform in challenging
+              environments and what risks you may not be aware of
+            </p>
           </a>
 
           <a
@@ -47,7 +47,8 @@ export default function Home() {
           >
             <h3>Stock Insights &rarr;</h3>
             <p>
-              What does the market say about a stock's value and how will it fit into your overall strategy
+              What does the market say about a stock's value and how will it fit
+              into your overall strategy
             </p>
           </a>
         </div>
@@ -59,7 +60,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
