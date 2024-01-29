@@ -1,13 +1,15 @@
-const Portfolio = (props) => {
-  const { portfolio } = props;
+const Page = async (props) => {
+  const { portfolio } = await getData();
+
   return (
     <>
-      <p>{portfolio.name}</p>;<p>{portfolio.description}</p>;
+      <p>{portfolio.name}</p>
+      <p>{portfolio.description}</p>
     </>
   );
 };
 
-export const getStaticProps = async () => {
+async function getData() {
   const PORTFOLIO_ID = "123";
   let portfolio;
   const query = ``;
@@ -35,10 +37,13 @@ export const getStaticProps = async () => {
   }
   console.log(portfolio);
   return {
-    props: {
-      portfolio: { name: "test", description: "test", value: 0, positions: [] },
+    portfolio: {
+      name: "Tyler's portfolio",
+      description: "The best portfolio out there",
+      value: 0,
+      positions: [],
     },
   };
-};
+}
 
-export default Portfolio;
+export default Page;
