@@ -1,11 +1,21 @@
 import equities from "./mockData";
 
+type Equity = {
+  id?: string;
+  name?: string;
+  description?: string;
+  ticker?: string;
+  themes?: string[];
+};
+
 const equityResolvers = {
   Query: {
     equity: async (parent, args) => {
       try {
         //   const response = await fetch(process.env.URL_API)
-        const data = equities.find((equity) => equity.ticker === args.ticker);
+        const data: Equity =
+          equities.find((equity: Equity) => equity.ticker === args.ticker) ||
+          {};
 
         return {
           id: data.id,

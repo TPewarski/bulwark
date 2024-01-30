@@ -1,11 +1,14 @@
+import { AddPositionForm } from "./AddPositionForm";
+
 const Page = async (props) => {
   const { portfolio } = await getData();
 
   return (
-    <>
-      <p>{portfolio.name}</p>
-      <p>{portfolio.description}</p>
-    </>
+    <div className="flex flex-col">
+      <p className="m-10">{portfolio.name}</p>
+      <p className="m-10 mt-0">{portfolio.description}</p>
+      <AddPositionForm />
+    </div>
   );
 };
 
